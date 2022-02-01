@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.9147b936.chunk.css",
+    "main.js": "./static/js/main.f74b6e29.chunk.js",
+    "main.js.map": "./static/js/main.f74b6e29.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.82bb4920.js",
+    "runtime-main.js.map": "./static/js/runtime-main.82bb4920.js.map",
+    "static/js/2.a846f3c7.chunk.js": "./static/js/2.a846f3c7.chunk.js",
+    "static/js/2.a846f3c7.chunk.js.map": "./static/js/2.a846f3c7.chunk.js.map",
+    "static/js/3.01b52165.chunk.js": "./static/js/3.01b52165.chunk.js",
+    "static/js/3.01b52165.chunk.js.map": "./static/js/3.01b52165.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.9147b936.chunk.css.map": "./static/css/main.9147b936.chunk.css.map",
+    "static/js/2.a846f3c7.chunk.js.LICENSE.txt": "./static/js/2.a846f3c7.chunk.js.LICENSE.txt",
+    "static/media/App.css": "./static/media/star-wars.0541ce43.jpg",
+    "static/media/yoda.299a26bf.png": "./static/media/yoda.299a26bf.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82bb4920.js",
+    "static/js/2.a846f3c7.chunk.js",
+    "static/css/main.9147b936.chunk.css",
+    "static/js/main.f74b6e29.chunk.js"
+  ]
+}

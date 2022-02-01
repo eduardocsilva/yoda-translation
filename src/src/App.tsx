@@ -1,4 +1,4 @@
-import { TextField } from "@material-ui/core";
+import { Button, TextField } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import axios from "axios";
 import { useState } from "react";
@@ -18,9 +18,8 @@ const useStyles = makeStyles({
         borderRadius: "10px",
         width: "300px",
         color: '#FFF',
-        backgroundColor: "rgba(245, 245, 245, 0.3)",
         "&:active, &:hover, &:focus, &:not(:hover)": {
-            backgroundColor: "rgba(245, 245, 245, 0.2)",
+            backgroundColor: "rgba(49, 49, 49, 1)",
         },
         "&&": {
             marginBottom: "50px",
@@ -43,23 +42,18 @@ function App() {
     const handleChange = (e: any) => {
         const userText = e.target.value;
         setEnglishText(userText);
+    }
 
-        const translatedText = getTranslation(userText);
-        console.log(translatedText);
-
-        // TODO: set the text in the API response
-        //setYodaText(getTranslation(e.target.value));
+    const executeTranslation = async (e: any) => {
+        const translatedText = await getTranslation(englishText);
+        setYodaText(translatedText);
     };
 
     const getTranslation = (englishText: string) => {
         return axios
-            .post("/translate/yoda.json?" + new URLSearchParams({ englishText }), { englishText })
-            .then((res: any) => {
-                return res
-            })
-            .catch((err: any) => {
-                return err
-            });
+            .post("/translate/yoda.json?" + new URLSearchParams({ text: englishText }), { text: englishText })
+            .then((res: any) => res.data.contents.translated)
+            .catch((err: any) => err);
     }
 
     return (
@@ -105,6 +99,16 @@ function App() {
                 </div>
 
                 {/* TODO: Add a button to execute the translation, as the API has a limit of 5 requests per hour */}
+                <Button
+                    id="translate-button"
+                    variant="contained"
+                    component="label"
+                    color="secondary"
+                    size="large"
+                    onClick={executeTranslation}
+                >
+                    Translate
+                </Button>
 
                 <h2 id="footer" className="fade star-wars-font">{`© ${new Date().getFullYear()} - Eduardo Silva`}</h2>
             </header>

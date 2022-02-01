@@ -17,16 +17,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 p, span {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .App-header {
-  /* background-image: url(images/star-wars.jpeg); */
-  background-color: #111;
+  background-image: url(images/star-wars.jpg);
+  /* background-color: #111; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,6 +77,13 @@ p, span {
 
 #translation textarea {
   padding: 20px 10px !important;
+}
+
+#translate-button {
+  margin-bottom: 20px;
+  background-color: #FFE81F;
+  color: #000;
+  font-family: StarJedi;
 }
 
 #footer {
